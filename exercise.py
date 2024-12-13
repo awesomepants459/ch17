@@ -8,7 +8,7 @@ pd.read_sql('SELECT last FROM authors ORDER BY last DESC', conn)
 
 pd.read_sql('SELECT title FROM titles ORDER BY title ASC', conn)
 
-pd.read_sql('SELECT ')
+pd.read_sql('SELECT title, copyright, isbn, FROM titles INNER JOIN author_ISBN ON isbn = authors.isbn ORDER BY title ASC')
 
 curs = curs.execute("""INSERT INTO authors (first, last) VALUES ('Jon', 'Spansail')""")
 
